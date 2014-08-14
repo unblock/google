@@ -6,30 +6,35 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <title>GOOGLE MIRROR</title>
+    <title>ELGOOG</title>
 
     <meta name="author" content="yucc2008@gmail.com"/>
     <meta name="description" content="google mirror site">
 
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <style type="text/css">
+        body{
+            background-color: tomato;
+            color: white;
+        }
+        .container{
+            width: 500px;
+            margin: 5em auto;
+            text-align: left;
+        }
+        h1, p{
+            text-align: center;
+        }
+    </style>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 </head>
 
 <body>
+<div class="container">
+    {{content}}
+</div>
 
-<header>
-
-</header>
-
-<main role="main" class="container">
-    {{ content }}
-</main>
-<footer>
-
-</footer>
-<script src="{{ site.baseurl }}/scripts/main.js"></script>
 </body>
 </html>
+

@@ -1,4 +1,59 @@
----
-layout: default
----
-<h1>GOOGLE</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>Google Luck</title>
+
+    <meta name="author" content="yucc2008@gmail.com"/>
+    <meta name="description" content="google mirror site">
+
+    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/scripts/angular.mini.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+
+<body ng-app="goApp">
+<header>
+    <div></div>
+    <div></div>
+    <div></div>
+</header>
+
+<main class="container" ng-controller="MainCtrl">
+    <div class="logo"></div>
+
+    <div class="search">
+        <input type="text" tabindex="1" enter="search()" ng-model="key" placeholder="Free Google"/>
+        <input type="button" ng-click="search()" value="Google Luck" ng-disabled="!google.connected" />
+    </div>
+    <div class="status">
+        <div class="title {{hostFound?'connected':'connecting'}}">
+            <span ng-click="toggleDetail()">{{hostFound ? "&#8766; Connection established" : "&#8987;&nbsp;Connecting to Google..."}}</span>
+            <span class="reset" ng-click="reset()">&#8634;&nbsp;reset</span>
+        </div>
+        <ul class="detail {{showDetail?'show':'hide'}}">
+            <li ng-repeat="mirror in mirrors | orderBy:'timecost'" class="{{mirror.status}}">
+                <span><a href="http://{{mirror.host}}" target="_blank">{{mirror.host}}</a></span>
+                <span>{{ mirror.timecost ? mirror.timecost+"ms" : mirror.status}}</span>
+                <image ng-src="{{mirror.testUrl}}" image-load="{{mirror.host}}"></image>
+            </li>
+        </ul>
+    </div>
+</main>
+<footer>
+    <a target="_blank" href="https://github.com/unblock/google/blob/gh-pages/LICENSE">&#169; 2014</a>
+    <a target="_blank" href="https://github.com/unblock/google">&#10084; GitHub</a>
+    <a target="_blank" href="/about">&#43; Feedback</a>
+</footer>
+
+<script src="/scripts/app.js"></script>
+</body>
+</html>
+
