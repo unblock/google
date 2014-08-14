@@ -47,7 +47,7 @@ header{
       background: none;
       font-size: 3em;
       font-weight: bold;
-      min-height: 5em;
+      min-height: 2em;
     }
     min-height: 280px;
     height: 20%;
@@ -76,6 +76,18 @@ header{
           background-color: gray;
           cursor: wait;
         }
+      }
+    }
+    @include mobile{
+      display: block;
+      text-align: center;
+      input{
+        &[type=text]{
+          border: 1px solid $blue;
+          margin-bottom: 1em;
+        }
+        width: 100%;
+        display: block;
       }
     }
   }
