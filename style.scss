@@ -19,8 +19,12 @@ html, body{
 }
 header{
   display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
   div{
     flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
     border-top: 4px solid;
     &:first-child{
       border-top-color: red;
@@ -36,10 +40,15 @@ header{
 .container {
   margin: 0 auto ;
   max-width: 500px;
-  min-width: 400px;
   text-align: center;
   padding-bottom: 4em;
   .logo{
+    @include mobile{
+      background: none;
+      font-size: 3em;
+      font-weight: bold;
+      min-height: 5em;
+    }
     min-height: 280px;
     height: 20%;
     background: transparent url(images/gfw.png) no-repeat;
@@ -152,6 +161,9 @@ header{
 }
 
 footer{
+  @include mobile{
+    display: none;
+  }
   background: #f2f2f2;
   border-top: 1px solid #e4e4e4;
   line-height: 40px;
@@ -162,6 +174,7 @@ footer{
   font-family: arial,sans-serif;
   font-size: small;
   padding: 0 5em;
+  display: flex;
   a{
     color: darkgrey;
     text-decoration: none;
