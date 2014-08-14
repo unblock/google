@@ -21,7 +21,6 @@ app.controller("MainCtrl", function ($scope, $rootScope) {
     $rootScope.mirrors = [];
 
     $scope.runTest = function () {
-        console.log("run", hosts.length);
         var i = 0;
         if(!hosts.length){
             $scope.hostFound = true;
@@ -51,7 +50,6 @@ app.controller("MainCtrl", function ($scope, $rootScope) {
     };
 
     $rootScope.$watch("mirrors", function () {
-        console.log("change");
         var finishedTests = [],
             pendingTests = [];
         $rootScope.mirrors.forEach(function (mirror) {
@@ -104,7 +102,6 @@ app.directive('imageLoad', function($rootScope) {
         link: function(scope, element, attrs) {
             element.bind('load', function() {
                 scope.$apply(function () {
-                    console.log('image is loaded', attrs.imageLoad);
                     var currentHost = attrs.imageLoad;
                     var mirror = $rootScope.mirrors.filter(function (mirror) {
                         return mirror.host == currentHost;
