@@ -14,12 +14,12 @@
 
     <style type="text/css">
         body{
-            background-color: tomato;
-            color: white;
+            background-color: ghostwhite;
+            color: tomato;
         }
         .container{
-            width: 500px;
-            margin: 5em auto;
+            width: 600px;
+            margin: 5em auto 0;
             text-align: left;
         }
         h1, p{
@@ -34,7 +34,18 @@
 <div class="container">
     {{content}}
 </div>
-
+<div class="ds-thread" data-thread-key="about" data-title="about" data-url="http://unblock.github.io/google/about/"></div>
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"google-luck"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
 </body>
 </html>
 

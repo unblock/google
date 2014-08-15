@@ -7,5 +7,6 @@ layout: default
 3. 借助浏览器端历史数据，镜像IP会有一个个性化顺序，以便更快更准确的找出可靠IP镜像；
 4. 但自动选择的连接通畅时，可以点击“RESET”按钮来清空浏览器端数据，对所有镜像IP重新测速；
 5. 点击“CONNECTION ESTABLISHED”可显示当前测试过的IP，可以直接点击访问；
+6. 每次搜索前，心中默念“芝麻开门”可显著提高成功率；
 
 **[问题反馈/改进意见/发现好用的镜像IP](https://github.com/unblock/google/issues)**
