@@ -100,6 +100,7 @@ app.directive('imageLoad', function($rootScope) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
+
             element.bind('load', function() {
                 scope.$apply(function () {
                     var currentHost = attrs.imageLoad;
@@ -113,6 +114,18 @@ app.directive('imageLoad', function($rootScope) {
                     mirror.timecost = ms;
                 });
 
+            });
+
+            element.bind('error', function() {
+                scope.$apply(function () {
+                    var currentHost = attrs.imageLoad;
+                    var mirror = $rootScope.mirrors.filter(function (mirror) {
+                        return mirror.host == currentHost;
+                    }).pop();
+                    mirror.status = "timeout";
+                });
+
+                return false;
             });
         }
     };

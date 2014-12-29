@@ -28,11 +28,12 @@
 
 <main class="container" ng-controller="MainCtrl">
     <div class="logo">GOOGLE LUCK</div>
-
+    <h1>{{hostFound}}</h1>
     <div class="search">
         <input type="text" tabindex="1" autofocus="autofocus" enter="search()" ng-model="key" placeholder="Don't Be Evil"/>
         <input type="button" ng-click="search()" value="Google Luck" ng-disabled="!google.connected" />
     </div>
+
     <div class="status">
         <div class="title {{hostFound?'connected':'connecting'}}">
             <span ng-click="toggleDetail()">{{hostFound ? "&#8766; Connection established" : "&#8987;&nbsp;Connecting to Google..."}}</span>
