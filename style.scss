@@ -7,8 +7,6 @@ $blue: #4285f4;
   }
 }
 *{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html, body{
@@ -18,11 +16,13 @@ html, body{
   margin: 0;
 }
 header{
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
   div{
-    flex: 1;
+    -ms-flex: 1;
+        flex: 1;
     -webkit-flex: 1;
     -moz-flex: 1;
     border-top: 4px solid;
@@ -57,22 +57,29 @@ header{
     background-size: contain;
   }
   .search{
-    font-size: 1.2em;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-
+    
     input{
+      font-size: 1.2em;
+      -webkit-appearance: none;
+      border-radius: 0;
       padding: 8px;
       border: 1px solid rgba(200, 200, 200, .9);
       outline: none;
       font-weight: bold;
       &[type=text]{
-        flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
         border-right: none;
       }
       &[type=button]{
         background-color: $blue;
         color: white;
         cursor: pointer;
+        margin-left: -5px;
         &[disabled]{
           background-color: gray;
           cursor: wait;
@@ -86,6 +93,9 @@ header{
         &[type=text]{
           border: 1px solid $blue;
           margin-bottom: 1em;
+        }
+        &[type=button]{
+            margin-left: 0;
         }
         width: 100%;
         display: block;
@@ -124,6 +134,8 @@ header{
 
       li{
         padding-top: 1em;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         img{
           display: none;
@@ -153,7 +165,11 @@ header{
         }
         span{
 
-          flex: 1;
+          -webkit-flex: 1;
+
+              -ms-flex: 1;
+
+                  flex: 1;
           &:last-of-type{
             text-align: right;
           }
@@ -187,6 +203,8 @@ footer{
   font-family: arial,sans-serif;
   font-size: small;
   padding: 0 5em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   a{
     color: darkgrey;
@@ -202,4 +220,4 @@ footer{
 
 .test-image{
   height: 20px;
-}
+}}}
