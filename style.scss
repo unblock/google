@@ -51,7 +51,7 @@ header{
     color: white;
     min-height: 280px;
     height: 20%;
-    background: transparent url(images/gfw.png) no-repeat;
+    background: transparent url({{site.cnd}}/images/gfw.png) no-repeat;
     background-position: center center;
     background-size: contain;
   }
@@ -59,7 +59,7 @@ header{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    
+
     input{
       font-size: 1.2em;
       -webkit-appearance: none;
