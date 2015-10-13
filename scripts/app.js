@@ -6,7 +6,7 @@ app.controller("MainCtrl", function ($scope, $rootScope) {
     var threadCount = 3,
         timeout = 2000,
         testUrl = "/images/srpr/logo11w.png",
-        originalHosts =  ["64.233.189.102", "64.233.162.83"],
+        originalHosts =  ["gg.wen.lu", "www.ggooo.net","g.yh.gs","gg.kfd.me","guge.in","hisbig.com","g.yon.hk","g.weme.so","gs.awei.me","www.guge.link","www.guge119.com","google-hk.wewell.net","google.sidney-aldebaran.me","www.google52.com","go.hibenben.com","www.guge.date","www.guge.click","g.searcher.top","sslpxy.com","gg.searcher.top","gg.cellmean.com","go.hibenben.com","www.google52.com","www.guge119.com","www.googlestable.cn","google.sidney-aldebaran.me"],
         hosts = angular.copy(originalHosts),
         hostCount = hosts.length;
 
